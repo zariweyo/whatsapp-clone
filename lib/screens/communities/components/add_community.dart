@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/constants/colors.dart';
 
-
-
 class AddNewCommunity extends StatelessWidget {
   const AddNewCommunity({
     super.key,
@@ -12,9 +10,7 @@ class AddNewCommunity extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        color: kbackgroundColor,
-        shape: BoxShape.rectangle
-      ),
+          color: kbackgroundColor, shape: BoxShape.rectangle),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
         child: Row(
@@ -26,11 +22,12 @@ class AddNewCommunity extends StatelessWidget {
                   // height: 50,
                   // width: 50,
                   decoration: BoxDecoration(
-                    color: Colors.grey.withOpacity(.5),
+                    color: Colors.grey.withValues(alpha: .5),
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                   padding: const EdgeInsets.all(5.0),
-                  child: const Icon(Icons.groups, color: kIconColor, size: 35.0),
+                  child:
+                      const Icon(Icons.groups, color: kIconColor, size: 35.0),
                 ),
                 Positioned(
                   right: -17,

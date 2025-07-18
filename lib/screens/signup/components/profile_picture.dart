@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/constants/colors.dart';
 
-
 class UserProfilePicture extends StatelessWidget {
   const UserProfilePicture({
     super.key,
@@ -12,7 +11,7 @@ class UserProfilePicture extends StatelessWidget {
     return Stack(
       children: [
         CircleAvatar(
-          backgroundColor: Colors.grey.withOpacity(0.3),
+          backgroundColor: Colors.grey.withValues(alpha: .3),
           backgroundImage: const AssetImage('assets/img/default.png'),
           radius: MediaQuery.of(context).size.width * .17,
         ),
@@ -21,18 +20,15 @@ class UserProfilePicture extends StatelessWidget {
           right: 0,
           child: Container(
             decoration: const BoxDecoration(
-              color: kPrimaryColor,
-              shape: BoxShape.circle
-            ),
+                color: kPrimaryColor, shape: BoxShape.circle),
             height: 45.0,
             width: 45.0,
             child: IconButton(
-              onPressed: () {}, 
-              icon: const Icon(
-                Icons.add_a_photo, 
-                color: Colors.white,
-              ) 
-            ),
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.add_a_photo,
+                  color: Colors.white,
+                )),
           ),
         ),
       ],

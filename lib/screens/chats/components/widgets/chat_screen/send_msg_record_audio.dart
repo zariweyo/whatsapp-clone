@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:whatsapp_clone/constants/colors.dart';
-
+import 'package:whatsapp_clone/screens/chats/bloc/chat_bloc.dart';
+import 'package:whatsapp_clone/screens/chats/bloc/chat_event.dart';
 
 class SendMessageAndRecordAudioWidget extends StatelessWidget {
   const SendMessageAndRecordAudioWidget({
@@ -9,53 +11,36 @@ class SendMessageAndRecordAudioWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Container(
-          decoration: BoxDecoration(
-            color: kchatBarMessage,
-            borderRadius: BorderRadius.circular(20.0),
-          ),
-          margin: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 4.5),
-          child: Row(
-            children: [
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.sentiment_satisfied_outlined),
-              ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width * .47,
-                child: const TextField(
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    hintStyle: TextStyle(color: kTextDarkColor),
-                    hintText: 'Message',
-                    
-                  ),
-                ),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.attach_file),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.camera_alt_outlined),
-              ),
-            ],
-          ),
-        ),
-        Container(
-          decoration: const BoxDecoration(
-            color: kPrimaryColor,
-            shape: BoxShape.circle
-          ),
-          child: IconButton(
+    TextEditingController controller = TextEditingController();
+    return Container(
+      decoration: BoxDecoration(
+        color: kchatBarMessage,
+        borderRadius: BorderRadius.circular(20.0),
+      ),
+      margin: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 4.5),
+      child: Row(
+        children: [
+          IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.mic, color: Colors.black),
+            icon: const Icon(Icons.sentiment_satisfied_outlined),
           ),
-        ),
-      ],
+          Expanded(
+            child: TextField(
+              controller: controller,
+              style: const TextStyle(color: Colors.white),
+              onSubmitted: (value) {
+                controller.text = "";
+                BlocProvider.of<ChatBloc>(context)
+                    .add(SendMessageEvent(text: value));
+              },
+              decoration: const InputDecoration(
+                  border: InputBorder.none,
+                  hintStyle: TextStyle(color: kTextDarkColor),
+                  hintText: 'Message'),
+            ),
+          )
+        ],
+      ),
     );
   }
 }

@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/constants/colors.dart';
-
+import 'package:whatsapp_clone/extensions/datetime.extension.dart';
+import 'package:whatsapp_clone/models/message.dart';
 
 class ReceiverMessageBubble extends StatelessWidget {
-  final String message;
-  final String timeStamp;
+  final Message message;
 
   const ReceiverMessageBubble({
     super.key,
     required this.message,
-    required this.timeStamp,
   });
 
   @override
@@ -18,25 +17,26 @@ class ReceiverMessageBubble extends StatelessWidget {
       alignment: Alignment.centerLeft,
       child: ConstrainedBox(
         constraints: BoxConstraints(
-          maxWidth: message.characters.length > 10 ? MediaQuery.of(context).size.width * .65 : MediaQuery.of(context).size.width * .3
-        ),
+            maxWidth: message.text.characters.length > 10
+                ? MediaQuery.of(context).size.width * .65
+                : MediaQuery.of(context).size.width * .3),
         child: Card(
           color: kmessageBubbleColor,
           elevation: 1.0,
           margin: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
           shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-              topRight: Radius.circular(10.0),
-              bottomRight: Radius.circular(10.0),
-              bottomLeft: Radius.circular(10.0),
-            )
-          ),
+              borderRadius: BorderRadius.only(
+            topRight: Radius.circular(10.0),
+            bottomRight: Radius.circular(10.0),
+            bottomLeft: Radius.circular(10.0),
+          )),
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 3.0),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10.0, vertical: 3.0),
                 child: Text(
-                  message,
+                  message.text,
                   style: const TextStyle(color: kTextColor),
                 ),
               ),
@@ -46,8 +46,9 @@ class ReceiverMessageBubble extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(right: 10.0, bottom: 3.0),
                     child: Text(
-                      timeStamp,
-                      style: const TextStyle(color: kTextDarkColor, fontSize: 12.0),
+                      message.timeZ.toLocal().toHourMinute(),
+                      style: const TextStyle(
+                          color: kTextDarkColor, fontSize: 12.0),
                     ),
                   )
                 ],

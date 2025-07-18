@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/constants/colors.dart';
 
-
 class SuggestedChannelsCard extends StatelessWidget {
   final String name, channelProfilePicture;
 
@@ -37,13 +36,14 @@ class SuggestedChannelsCard extends StatelessWidget {
                         shape: BoxShape.circle,
                       ),
                       padding: const EdgeInsets.all(2.0),
-                      child: const Icon(Icons.verified, color: kPrimaryColor, size: 20.0),
+                      child: const Icon(Icons.verified,
+                          color: kPrimaryColor, size: 20.0),
                     ),
                   )
                 ],
               ),
               const SizedBox(height: 10.0),
-              
+
               // channel name
               SizedBox(
                 width: MediaQuery.of(context).size.width * .8,
@@ -51,14 +51,12 @@ class SuggestedChannelsCard extends StatelessWidget {
                   name,
                   softWrap: true,
                   style: const TextStyle(
-                    color: kTextColor,
-                    overflow: TextOverflow.ellipsis
-                  ),
+                      color: kTextColor, overflow: TextOverflow.ellipsis),
                   textAlign: TextAlign.center,
                 ),
               ),
               const SizedBox(height: 10.0),
-              
+
               // follow button
               Container(
                 height: 35.0,
@@ -66,14 +64,14 @@ class SuggestedChannelsCard extends StatelessWidget {
                 // padding: const EdgeInsets.all(1.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20.0),
-                  color: kPrimaryColor.withOpacity(.5),
+                  color: kPrimaryColor.withValues(alpha: .5),
                 ),
                 child: TextButton(
                   onPressed: () {},
-                  child: const Text('Follow', style: TextStyle(color: Colors.white)),
+                  child: const Text('Follow',
+                      style: TextStyle(color: Colors.white)),
                 ),
               ),
-            
             ],
           ),
         ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/constants/colors.dart';
 
-
 class MobileNumberInputField extends StatelessWidget {
   const MobileNumberInputField({
     super.key,
@@ -21,12 +20,13 @@ class MobileNumberInputField extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(5.0),
             decoration: BoxDecoration(
-              color: Colors.grey.withOpacity(.4),
+              color: Colors.grey.withValues(alpha: .4),
             ),
             child: Text(
-              countryCode == null ? '+1' : '+$countryCode',  // if country code is null display '+1' else display the country code
-              style: const TextStyle(color: kTextColor)
-            ),
+                countryCode == null
+                    ? '+1'
+                    : '+$countryCode', // if country code is null display '+1' else display the country code
+                style: const TextStyle(color: kTextColor)),
           ),
           const SizedBox(width: 10.0),
           SizedBox(
