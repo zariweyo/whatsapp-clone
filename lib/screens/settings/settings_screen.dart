@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-import 'package:whatsapp_clone/screens/settings/components/settings_body.dart';
-
+import 'package:whoishe/constants/colors.dart';
+import 'package:whoishe/screens/settings/components/settings_body.dart';
 
 class SettingsScreen extends StatelessWidget {
   static String routeName = '/settings';
@@ -10,21 +9,19 @@ class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: kbackgroundColor,
-        title: const Text(
-          'Settings',
-          style: TextStyle(fontSize: 20.0),
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {}, 
-            icon: const Icon(Icons.search),
+        appBar: AppBar(
+          backgroundColor: kbackgroundColor,
+          title: const Text(
+            'Settings',
+            style: TextStyle(fontSize: 20.0),
           ),
-        ],
-      ),
-      body: const SettingsScreenBody()
-    );
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.search),
+            ),
+          ],
+        ),
+        body: const SettingsScreenBody());
   }
 }
-

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-import 'package:whatsapp_clone/screens/updates/components/widgets/channels/channels.dart';
-import 'package:whatsapp_clone/screens/updates/components/widgets/channels/channels_header.dart';
-import 'package:whatsapp_clone/screens/updates/components/widgets/channels/suggested_channels.dart';
-import 'package:whatsapp_clone/screens/updates/components/widgets/channels/suggested_channels_header.dart';
-import 'package:whatsapp_clone/screens/updates/components/widgets/status/status_header.dart';
-import 'package:whatsapp_clone/screens/updates/components/widgets/status/statuses.dart';
-
+import 'package:whoishe/constants/colors.dart';
+import 'package:whoishe/screens/updates/components/widgets/channels/channels.dart';
+import 'package:whoishe/screens/updates/components/widgets/channels/channels_header.dart';
+import 'package:whoishe/screens/updates/components/widgets/channels/suggested_channels.dart';
+import 'package:whoishe/screens/updates/components/widgets/channels/suggested_channels_header.dart';
+import 'package:whoishe/screens/updates/components/widgets/status/status_header.dart';
+import 'package:whoishe/screens/updates/components/widgets/status/statuses.dart';
 
 class UpdatesScreenBody extends StatelessWidget {
   const UpdatesScreenBody({

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-import 'package:whatsapp_clone/screens/chats/bloc/chat_bloc.dart';
-import 'package:whatsapp_clone/screens/chats/bloc/chat_event.dart';
+import 'package:whoishe/constants/colors.dart';
+import 'package:whoishe/screens/chats/bloc/chat_bloc.dart';
+import 'package:whoishe/screens/chats/bloc/chat_event.dart';
 
 class SendMessageAndRecordAudioWidget extends StatelessWidget {
   const SendMessageAndRecordAudioWidget({

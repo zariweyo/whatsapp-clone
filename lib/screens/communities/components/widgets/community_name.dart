@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-
+import 'package:whoishe/constants/colors.dart';
 
 class CommunityName extends StatelessWidget {
   final String profilePicture;
@@ -41,4 +40,3 @@ class CommunityName extends StatelessWidget {
     );
   }
 }
-

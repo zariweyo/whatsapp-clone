@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-
-
+import 'package:whoishe/constants/colors.dart';
 
 class CommunityAnnouncements extends StatelessWidget {
-  final String announcement;  // annoucement message/text
+  final String announcement; // annoucement message/text
   final String announcementTimeStamp;
 
   const CommunityAnnouncements({
@@ -52,11 +50,9 @@ class CommunityAnnouncements extends StatelessWidget {
         subtitle: Text(
           announcement,
           style: const TextStyle(
-            color: kTextDarkColor,
-            overflow: TextOverflow.ellipsis
-          ),
+              color: kTextDarkColor, overflow: TextOverflow.ellipsis),
         ),
-      ), 
+      ),
     );
   }
 }

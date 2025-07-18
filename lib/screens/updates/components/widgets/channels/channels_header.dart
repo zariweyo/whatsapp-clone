@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-
+import 'package:whoishe/constants/colors.dart';
 
 class ChannelsHeader extends StatelessWidget {
   const ChannelsHeader({
@@ -17,10 +16,7 @@ class ChannelsHeader extends StatelessWidget {
           Text(
             'Channels',
             style: TextStyle(
-              color: kTextColor,
-              fontSize: 20.0,
-              fontWeight: FontWeight.w500
-            ),
+                color: kTextColor, fontSize: 20.0, fontWeight: FontWeight.w500),
           ),
           Icon(Icons.add, color: kIconColor),
         ],

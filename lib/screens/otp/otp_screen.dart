@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-import 'package:whatsapp_clone/screens/otp/components/body.dart';
-
+import 'package:whoishe/constants/colors.dart';
+import 'package:whoishe/screens/otp/components/body.dart';
 
 class OTPScreen extends StatelessWidget {
   static String routeName = '/otp-screen';

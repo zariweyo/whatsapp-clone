@@ -1,8 +1,7 @@
 import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-import 'package:whatsapp_clone/screens/login/components/body.dart';
-
+import 'package:whoishe/constants/colors.dart';
+import 'package:whoishe/screens/login/components/body.dart';
 
 class LoginScreen extends StatefulWidget {
   static String routeName = '/login';
@@ -24,14 +23,13 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void _pickCountry() {
     showCountryPicker(
-      showPhoneCode: true,
-      context: context, 
-      onSelect: (Country country) {
-        setState(() {
-          selectCountry = country;
+        showPhoneCode: true,
+        context: context,
+        onSelect: (Country country) {
+          setState(() {
+            selectCountry = country;
+          });
         });
-      }
-    );
   }
 
   @override

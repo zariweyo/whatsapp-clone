@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/screens/profile/components/widgets/profile_details.dart';
-import 'package:whatsapp_clone/screens/profile/components/widgets/profile_pic_widget.dart';
-
+import 'package:whoishe/screens/profile/components/widgets/profile_details.dart';
+import 'package:whoishe/screens/profile/components/widgets/profile_pic_widget.dart';
 
 class ProfileScreenBody extends StatelessWidget {
   const ProfileScreenBody({
@@ -22,4 +21,3 @@ class ProfileScreenBody extends StatelessWidget {
     );
   }
 }
-

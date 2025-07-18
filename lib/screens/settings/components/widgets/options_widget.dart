@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-
+import 'package:whoishe/constants/colors.dart';
 
 class OptionsWidget extends StatelessWidget {
   final String optionsTitle;
@@ -35,7 +34,6 @@ class OptionsWidget extends StatelessWidget {
               fontSize: 15.0,
             ),
           ),
-        
         ),
       ),
     );

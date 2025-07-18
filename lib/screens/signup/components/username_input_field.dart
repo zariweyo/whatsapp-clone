@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/common/screens/homescreen.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-
+import 'package:whoishe/common/screens/homescreen.dart';
+import 'package:whoishe/constants/colors.dart';
 
 class UsernameInputField extends StatelessWidget {
   const UsernameInputField({
@@ -31,7 +30,8 @@ class UsernameInputField extends StatelessWidget {
           ),
         ),
         IconButton(
-          onPressed: () => Navigator.popAndPushNamed(context, HomeScreen.routeName),
+          onPressed: () =>
+              Navigator.popAndPushNamed(context, HomeScreen.routeName),
           color: kIconColor,
           icon: const Icon(Icons.check),
         )

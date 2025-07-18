@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/screens/settings/settings_screen.dart';
-
+import 'package:whoishe/screens/settings/settings_screen.dart';
 
 AppBar homepageHeader(context) {
   return AppBar(
@@ -14,15 +13,15 @@ AppBar homepageHeader(context) {
     ),
     actions: [
       IconButton(
-        onPressed: () {}, 
+        onPressed: () {},
         icon: const Icon(Icons.camera_alt_outlined),
       ),
       IconButton(
-        onPressed: () {}, 
+        onPressed: () {},
         icon: const Icon(Icons.search_outlined),
       ),
       IconButton(
-        onPressed: () => Navigator.pushNamed(context, SettingsScreen.routeName), 
+        onPressed: () => Navigator.pushNamed(context, SettingsScreen.routeName),
         icon: const Icon(Icons.more_vert),
       ),
     ],

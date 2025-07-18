@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-import 'package:whatsapp_clone/screens/settings/components/widgets/options_widget.dart';
-import 'package:whatsapp_clone/screens/settings/components/widgets/user_profile.dart';
-
+import 'package:whoishe/constants/colors.dart';
+import 'package:whoishe/screens/settings/components/widgets/options_widget.dart';
+import 'package:whoishe/screens/settings/components/widgets/user_profile.dart';
 
 class SettingsScreenBody extends StatelessWidget {
   const SettingsScreenBody({super.key});
@@ -14,9 +13,9 @@ class SettingsScreenBody extends StatelessWidget {
         padding: EdgeInsets.only(bottom: 10.0),
         child: Column(
           children: [
-            UserProfileInfo(),  // profile pic, bio + additional icons
+            UserProfileInfo(), // profile pic, bio + additional icons
             Divider(color: kDividerColor),
-            
+
             // options
             OptionsWidget(
               icon: Icons.key_outlined,
@@ -53,7 +52,7 @@ class SettingsScreenBody extends StatelessWidget {
               optionsTitle: 'App language',
               optionsDescription: 'Language settings',
             ),
-        
+
             Divider(color: kDividerColor),
             // footer
             Padding(
@@ -63,22 +62,19 @@ class SettingsScreenBody extends StatelessWidget {
                 children: [
                   Icon(Icons.lock_outline, color: kIconColor, size: 12.0),
                   SizedBox(width: 7.0),
-                  Text.rich(
-                    TextSpan(
+                  Text.rich(TextSpan(
                       text: 'Your calls and messages are ',
                       style: TextStyle(color: kTextDarkColor, fontSize: 11.0),
                       children: [
                         TextSpan(
                           text: 'end-to-end encrypted',
-                          style: TextStyle(color: kPrimaryColor, fontSize: 11.0),
+                          style:
+                              TextStyle(color: kPrimaryColor, fontSize: 11.0),
                         ),
-                      ]
-                    )
-                  )
+                      ]))
                 ],
               ),
             ),
-        
           ],
         ),
       ),

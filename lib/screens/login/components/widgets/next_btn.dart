@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-import 'package:whatsapp_clone/screens/otp/otp_screen.dart';
-
+import 'package:whoishe/constants/colors.dart';
+import 'package:whoishe/screens/otp/otp_screen.dart';
 
 class NextButton extends StatelessWidget {
   const NextButton({

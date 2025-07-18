@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-
+import 'package:whoishe/constants/colors.dart';
 
 class UserProfileDetails extends StatelessWidget {
   const UserProfileDetails({
@@ -16,7 +15,8 @@ class UserProfileDetails extends StatelessWidget {
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Name', style: TextStyle(color: kTextDarkColor, fontSize: 14.0)),
+              Text('Name',
+                  style: TextStyle(color: kTextDarkColor, fontSize: 14.0)),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -42,16 +42,15 @@ class UserProfileDetails extends StatelessWidget {
             ],
           ),
         ),
-    
         ListTile(
           leading: const Icon(Icons.info_outline, color: kTextDarkColor),
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                'About', 
+                'About',
                 style: TextStyle(
-                  color: kTextDarkColor, 
+                  color: kTextDarkColor,
                   fontSize: 14.0,
                 ),
               ),
@@ -61,7 +60,7 @@ class UserProfileDetails extends StatelessWidget {
                   SizedBox(
                     width: MediaQuery.of(context).size.width * .7,
                     child: const Text(
-                      'With great power comes great responsibility', 
+                      'With great power comes great responsibility',
                       style: TextStyle(
                         color: kTextColor,
                         fontSize: 15.0,
@@ -79,18 +78,17 @@ class UserProfileDetails extends StatelessWidget {
             child: Divider(color: kDividerColor),
           ),
         ),
-
         const ListTile(
           leading: Icon(Icons.phone_outlined, color: kTextDarkColor),
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Phone', style: TextStyle(color: kTextDarkColor, fontSize: 14.0)),
+              Text('Phone',
+                  style: TextStyle(color: kTextDarkColor, fontSize: 14.0)),
               Text('+254112345678', style: TextStyle(color: kTextColor))
             ],
           ),
         ),
-        
       ],
     );
   }

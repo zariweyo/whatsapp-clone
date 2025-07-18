@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-
+import 'package:whoishe/constants/colors.dart';
 
 class ChannelUpdate extends StatelessWidget {
   final String channelName;
@@ -8,7 +7,7 @@ class ChannelUpdate extends StatelessWidget {
   final String message;
   final String timeStamp;
   final int unreadMessages;
-  
+
   const ChannelUpdate({
     super.key,
     required this.channelName,
@@ -50,7 +49,9 @@ class ChannelUpdate extends StatelessWidget {
           const Icon(Icons.link, color: kTextDarkColor, size: 20.0),
           const SizedBox(width: 5.0),
           SizedBox(
-            width: unreadMessages > 0 ? MediaQuery.of(context).size.width * .48 : MediaQuery.of(context).size.width * .53,
+            width: unreadMessages > 0
+                ? MediaQuery.of(context).size.width * .48
+                : MediaQuery.of(context).size.width * .53,
             child: Text(
               message,
               style: const TextStyle(
@@ -59,15 +60,16 @@ class ChannelUpdate extends StatelessWidget {
               ),
             ),
           ),
-          if (unreadMessages != 0)
-            const Spacer(),
+          if (unreadMessages != 0) const Spacer(),
           if (unreadMessages != 0)
             Container(
               decoration: const BoxDecoration(
                 color: kPrimaryColor,
                 shape: BoxShape.circle,
               ),
-              padding: unreadMessages > 9 ? const EdgeInsets.all(4.0) : const EdgeInsets.all(6.0),
+              padding: unreadMessages > 9
+                  ? const EdgeInsets.all(4.0)
+                  : const EdgeInsets.all(6.0),
               child: Text(
                 unreadMessages.toString(),
                 style: const TextStyle(

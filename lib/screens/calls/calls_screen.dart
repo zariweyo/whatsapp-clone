@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/common/widgets/appbar.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-import 'package:whatsapp_clone/screens/calls/components/body.dart';
-
+import 'package:whoishe/common/widgets/appbar.dart';
+import 'package:whoishe/constants/colors.dart';
+import 'package:whoishe/screens/calls/components/body.dart';
 
 class CallsScreen extends StatelessWidget {
   const CallsScreen({super.key});

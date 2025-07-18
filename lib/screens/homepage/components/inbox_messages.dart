@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-import 'package:whatsapp_clone/models/chats.dart';
-
+import 'package:whoishe/constants/colors.dart';
+import 'package:whoishe/models/chats.dart';
 
 class MessagesWidget extends StatelessWidget {
   final String profilePicture;
@@ -40,7 +39,7 @@ class MessagesWidget extends StatelessWidget {
           Text(
             timeStamp,
             style: TextStyle(
-              color: !messageTick.isSender ? kPrimaryColor : kTextDarkColor ,
+              color: !messageTick.isSender ? kPrimaryColor : kTextDarkColor,
               fontSize: 12.0,
             ),
           ),
@@ -50,15 +49,20 @@ class MessagesWidget extends StatelessWidget {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            if(messageTick.isSender)  // check if the user is the one who sent the message
+            if (messageTick
+                .isSender) // check if the user is the one who sent the message
               Icon(
-                messageTick.isReceived ? Icons.done_all : Icons.done, // if the message is received display double ticks else display a single 'tick/check' icon
-                color: messageTick.isRead ? kBlueTickColor : Colors.grey, // if the message is read blue tick are blue else grey
+                messageTick.isReceived
+                    ? Icons.done_all
+                    : Icons
+                        .done, // if the message is received display double ticks else display a single 'tick/check' icon
+                color: messageTick.isRead
+                    ? kBlueTickColor
+                    : Colors
+                        .grey, // if the message is read blue tick are blue else grey
                 size: 16.0,
               ),
-
-            if(messageTick.isSender)
-              const SizedBox(width: 5.0),
+            if (messageTick.isSender) const SizedBox(width: 5.0),
             SizedBox(
               width: MediaQuery.of(context).size.width * .66,
               child: Text(
@@ -69,27 +73,25 @@ class MessagesWidget extends StatelessWidget {
                 ),
               ),
             ),
-
-            if(!messageTick.isSender)
-            Container(
-              decoration: const BoxDecoration(
-                color: kPrimaryColor,
-                shape: BoxShape.circle,
-              ),
-              padding: const EdgeInsets.all(6.0),
-              child: const Text(
-                '1',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 10.0,
-                  fontWeight: FontWeight.bold,
+            if (!messageTick.isSender)
+              Container(
+                decoration: const BoxDecoration(
+                  color: kPrimaryColor,
+                  shape: BoxShape.circle,
+                ),
+                padding: const EdgeInsets.all(6.0),
+                child: const Text(
+                  '1',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 10.0,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-            ),
           ],
         ),
       ),
-    
     );
   }
 }

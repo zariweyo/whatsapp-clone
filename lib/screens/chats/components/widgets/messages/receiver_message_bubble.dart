@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-import 'package:whatsapp_clone/extensions/datetime.extension.dart';
-import 'package:whatsapp_clone/models/message.dart';
+import 'package:whoishe/constants/colors.dart';
+import 'package:whoishe/extensions/datetime.extension.dart';
+import 'package:whoishe/models/message.dart';
 
 class ReceiverMessageBubble extends StatelessWidget {
   final Message message;

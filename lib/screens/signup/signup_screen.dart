@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/screens/signup/components/body.dart';
-
+import 'package:whoishe/screens/signup/components/body.dart';
 
 class SignupScreen extends StatefulWidget {
   static String routeName = '/signup';

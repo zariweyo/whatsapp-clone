@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:whatsapp_clone/models/message.dart';
-import 'package:whatsapp_clone/screens/chats/bloc/chat_event.dart';
-import 'package:whatsapp_clone/screens/chats/bloc/chat_state.dart';
+import 'package:whoishe/models/message.dart';
+import 'package:whoishe/screens/chats/bloc/chat_event.dart';
+import 'package:whoishe/screens/chats/bloc/chat_state.dart';
 
 class ChatBloc extends Bloc<ChatEvent, ChatState> {
   ChatBloc(super.initialState) {

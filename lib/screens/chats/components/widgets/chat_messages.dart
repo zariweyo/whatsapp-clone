@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:whatsapp_clone/models/messages.dart';
-import 'package:whatsapp_clone/screens/chats/bloc/chat_bloc.dart';
-import 'package:whatsapp_clone/screens/chats/bloc/chat_state.dart';
-import 'package:whatsapp_clone/screens/chats/components/widgets/messages/receiver_message_bubble.dart';
-import 'package:whatsapp_clone/screens/chats/components/widgets/messages/sender_message_bubble.dart';
+import 'package:whoishe/models/messages.dart';
+import 'package:whoishe/screens/chats/bloc/chat_bloc.dart';
+import 'package:whoishe/screens/chats/bloc/chat_state.dart';
+import 'package:whoishe/screens/chats/components/widgets/messages/receiver_message_bubble.dart';
+import 'package:whoishe/screens/chats/components/widgets/messages/sender_message_bubble.dart';
 
 class ChatScreenMessagesWidget extends StatelessWidget {
   const ChatScreenMessagesWidget({

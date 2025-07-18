@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/screens/calls/components/widgets/call_records_tile.dart';
-
+import 'package:whoishe/screens/calls/components/widgets/call_records_tile.dart';
 
 class CallHistory extends StatelessWidget {
   const CallHistory({super.key});

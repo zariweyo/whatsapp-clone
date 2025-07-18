@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-
+import 'package:whoishe/constants/colors.dart';
 
 class CreateCallLink extends StatelessWidget {
   const CreateCallLink({
@@ -21,7 +20,9 @@ class CreateCallLink extends StatelessWidget {
       ),
       subtitle: const Text(
         'Share a link for your WhatsApp call',
-        style: TextStyle(color: kTextDarkColor,),
+        style: TextStyle(
+          color: kTextDarkColor,
+        ),
       ),
     );
   }

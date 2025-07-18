@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-
+import 'package:whoishe/constants/colors.dart';
 
 class ChatsIcon extends StatelessWidget {
   final IconData icon;
@@ -21,9 +20,7 @@ class ChatsIcon extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.all(4.0),
             decoration: const BoxDecoration(
-              color: kPrimaryColor,
-              shape: BoxShape.circle
-            ),
+                color: kPrimaryColor, shape: BoxShape.circle),
             child: const Center(
               child: Text.rich(
                 TextSpan(

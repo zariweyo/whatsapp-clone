@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-
+import 'package:whoishe/constants/colors.dart';
 
 class CallScreenFooter extends StatelessWidget {
   const CallScreenFooter({
@@ -14,8 +13,7 @@ class CallScreenFooter extends StatelessWidget {
       children: [
         Icon(Icons.lock_outline, color: kIconColor, size: 12.0),
         SizedBox(width: 7.0),
-        Text.rich(
-          TextSpan(
+        Text.rich(TextSpan(
             text: 'Your personal calls are ',
             style: TextStyle(color: kTextDarkColor, fontSize: 11.0),
             children: [
@@ -23,11 +21,8 @@ class CallScreenFooter extends StatelessWidget {
                 text: 'end-to-end encrypted',
                 style: TextStyle(color: kPrimaryColor, fontSize: 11.0),
               ),
-            ]
-          )
-        )
+            ]))
       ],
     );
   }
 }
-

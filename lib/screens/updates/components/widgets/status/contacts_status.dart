@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-
+import 'package:whoishe/constants/colors.dart';
 
 class MyContactsStatus extends StatelessWidget {
   final String profilePicture;
@@ -28,10 +27,10 @@ class MyContactsStatus extends StatelessWidget {
               ),
               padding: const EdgeInsets.all(3.5),
               child: CircleAvatar(
-                  backgroundColor: Colors.grey,
-                  backgroundImage: AssetImage(profilePicture),
-                  radius: MediaQuery.of(context).size.width * .07,
-                ),
+                backgroundColor: Colors.grey,
+                backgroundImage: AssetImage(profilePicture),
+                radius: MediaQuery.of(context).size.width * .07,
+              ),
             ),
             const SizedBox(height: 5.0),
             Text(

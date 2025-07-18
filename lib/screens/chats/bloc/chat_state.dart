@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:whatsapp_clone/models/message.dart';
+import 'package:whoishe/models/message.dart';
 
 class ChatState extends Equatable {
   final List<Message> messages;

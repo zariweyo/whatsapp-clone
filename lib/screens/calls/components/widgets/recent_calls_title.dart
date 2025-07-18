@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-
+import 'package:whoishe/constants/colors.dart';
 
 class RecentCallsHeader extends StatelessWidget {
   const RecentCallsHeader({
@@ -13,12 +12,8 @@ class RecentCallsHeader extends StatelessWidget {
       padding: EdgeInsets.only(left: 18.0),
       child: Text(
         'Recent',
-        style: TextStyle(
-          color: kTextColor,
-          fontWeight: FontWeight.bold
-        ),
+        style: TextStyle(color: kTextColor, fontWeight: FontWeight.bold),
       ),
     );
   }
 }
-

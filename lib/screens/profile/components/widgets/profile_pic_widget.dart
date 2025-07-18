@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-
+import 'package:whoishe/constants/colors.dart';
 
 class UserProfilePictureWidget extends StatelessWidget {
   const UserProfilePictureWidget({
@@ -26,8 +25,9 @@ class UserProfilePictureWidget extends StatelessWidget {
                 shape: BoxShape.circle,
               ),
               child: IconButton(
-                onPressed: () {}, 
-                icon: const Icon(Icons.camera_alt_outlined, color: Colors.black),
+                onPressed: () {},
+                icon:
+                    const Icon(Icons.camera_alt_outlined, color: Colors.black),
               ),
             ),
           ),

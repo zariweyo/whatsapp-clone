@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/common/screens/homescreen.dart';
-import 'package:whatsapp_clone/screens/chats/chat_screen.dart';
-import 'package:whatsapp_clone/screens/login/login_screen.dart';
-import 'package:whatsapp_clone/screens/onboarding_screen/onboarding_screen.dart';
-import 'package:whatsapp_clone/screens/otp/otp_screen.dart';
-import 'package:whatsapp_clone/screens/profile/profile_screen.dart';
-import 'package:whatsapp_clone/screens/settings/settings_screen.dart';
-import 'package:whatsapp_clone/screens/signup/signup_screen.dart';
-
+import 'package:whoishe/common/screens/homescreen.dart';
+import 'package:whoishe/screens/chats/chat_screen.dart';
+import 'package:whoishe/screens/login/login_screen.dart';
+import 'package:whoishe/screens/onboarding_screen/onboarding_screen.dart';
+import 'package:whoishe/screens/otp/otp_screen.dart';
+import 'package:whoishe/screens/profile/profile_screen.dart';
+import 'package:whoishe/screens/settings/settings_screen.dart';
+import 'package:whoishe/screens/signup/signup_screen.dart';
 
 final Map<String, WidgetBuilder> routes = {
   OnboardingScreen.routeName: (context) => const OnboardingScreen(),
@@ -18,4 +17,4 @@ final Map<String, WidgetBuilder> routes = {
   ChatScreen.routeName: (context) => const ChatScreen(),
   SettingsScreen.routeName: (context) => const SettingsScreen(),
   ProfileScreen.routeName: (context) => const ProfileScreen(),
-} ;
+};

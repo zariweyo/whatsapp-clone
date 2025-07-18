@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-import 'package:whatsapp_clone/screens/login/login_screen.dart';
-
+import 'package:whoishe/constants/colors.dart';
+import 'package:whoishe/screens/login/login_screen.dart';
 
 class OnboardingScreen extends StatelessWidget {
   static String routeName = '/onboarding-screen';
@@ -15,7 +14,7 @@ class OnboardingScreen extends StatelessWidget {
           children: [
             SizedBox(height: MediaQuery.of(context).size.height * .08),
             Image.asset(
-              'assets/img/whatsapp-doodle-circle.png', 
+              'assets/img/whatsapp-doodle-circle.png',
               color: kPrimaryColor,
               height: MediaQuery.of(context).size.height * .5,
               width: MediaQuery.of(context).size.width * .9,
@@ -53,12 +52,14 @@ class OnboardingScreen extends StatelessWidget {
                 color: kPrimaryColor,
               ),
               child: TextButton(
-                onPressed: () => Navigator.pushNamed(context, LoginScreen.routeName),
-                child: const Text('Agree and continue', style: TextStyle(color: Colors.black)),
+                onPressed: () =>
+                    Navigator.pushNamed(context, LoginScreen.routeName),
+                child: const Text('Agree and continue',
+                    style: TextStyle(color: Colors.black)),
               ),
             )
           ],
-        ), 
+        ),
       ),
     );
   }

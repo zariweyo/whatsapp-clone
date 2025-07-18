@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-
+import 'package:whoishe/constants/colors.dart';
 
 class OTPScreenTitle extends StatelessWidget {
   const OTPScreenTitle({
@@ -10,10 +9,8 @@ class OTPScreenTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Text(
-      'We have sent an SMS with a code', 
-      style: TextStyle(
-        color: kTextColor
-      ),
+      'We have sent an SMS with a code',
+      style: TextStyle(color: kTextColor),
       textAlign: TextAlign.center,
     );
   }

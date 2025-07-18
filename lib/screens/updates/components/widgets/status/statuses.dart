@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/models/status.dart';
-import 'package:whatsapp_clone/screens/updates/components/widgets/status/contacts_status.dart';
-
+import 'package:whoishe/models/status.dart';
+import 'package:whoishe/screens/updates/components/widgets/status/contacts_status.dart';
 
 class StatusWidget extends StatelessWidget {
   const StatusWidget({
@@ -18,16 +17,12 @@ class StatusWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             // all posted statuses
-            ...List.generate(
-              uploadedStatus.length,
-              (index) {
-                return MyContactsStatus(
-                  profilePicture: uploadedStatus[index].profilePicture,
-                  username: uploadedStatus[index].username,
-                );
-              }
-            ),
-            
+            ...List.generate(uploadedStatus.length, (index) {
+              return MyContactsStatus(
+                profilePicture: uploadedStatus[index].profilePicture,
+                username: uploadedStatus[index].username,
+              );
+            }),
           ],
         ),
       ),

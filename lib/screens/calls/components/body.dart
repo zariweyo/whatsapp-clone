@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-import 'package:whatsapp_clone/screens/calls/components/widgets/call_history.dart';
-import 'package:whatsapp_clone/screens/calls/components/widgets/create_call_link.dart';
-import 'package:whatsapp_clone/screens/calls/components/widgets/footer.dart';
-import 'package:whatsapp_clone/screens/calls/components/widgets/recent_calls_title.dart';
-
+import 'package:whoishe/constants/colors.dart';
+import 'package:whoishe/screens/calls/components/widgets/call_history.dart';
+import 'package:whoishe/screens/calls/components/widgets/create_call_link.dart';
+import 'package:whoishe/screens/calls/components/widgets/footer.dart';
+import 'package:whoishe/screens/calls/components/widgets/recent_calls_title.dart';
 
 class CallsScreenBody extends StatelessWidget {
   const CallsScreenBody({

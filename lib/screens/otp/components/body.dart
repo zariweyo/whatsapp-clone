@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/screens/otp/components/otp_input_field.dart';
-import 'package:whatsapp_clone/screens/otp/components/otp_screen_title.dart';
-
+import 'package:whoishe/screens/otp/components/otp_input_field.dart';
+import 'package:whoishe/screens/otp/components/otp_screen_title.dart';
 
 class OTPScreenBody extends StatelessWidget {
   const OTPScreenBody({

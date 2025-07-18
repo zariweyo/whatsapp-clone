@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-import 'package:whatsapp_clone/screens/profile/profile_screen.dart';
-
+import 'package:whoishe/constants/colors.dart';
+import 'package:whoishe/screens/profile/profile_screen.dart';
 
 class UserProfileInfo extends StatelessWidget {
   const UserProfileInfo({
@@ -37,12 +36,14 @@ class UserProfileInfo extends StatelessWidget {
         child: Row(
           children: [
             IconButton(
-              onPressed: () {}, 
+              onPressed: () {},
               icon: const Icon(Icons.qr_code, color: kPrimaryColor),
             ),
             IconButton(
-              onPressed: () => Navigator.pushNamed(context, ProfileScreen.routeName), 
-              icon: const Icon(Icons.expand_circle_down_outlined, color: kPrimaryColor),
+              onPressed: () =>
+                  Navigator.pushNamed(context, ProfileScreen.routeName),
+              icon: const Icon(Icons.expand_circle_down_outlined,
+                  color: kPrimaryColor),
             ),
           ],
         ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-
+import 'package:whoishe/constants/colors.dart';
 
 class CallRecordTile extends StatelessWidget {
   final String username;
@@ -9,7 +8,6 @@ class CallRecordTile extends StatelessWidget {
   final IconData recordIcon;
   final Color iconColor;
   final Color usernameColor;
-
 
   const CallRecordTile({
     super.key,
@@ -20,7 +18,6 @@ class CallRecordTile extends StatelessWidget {
     this.iconColor = Colors.red,
     this.usernameColor = Colors.red,
   });
-
 
   @override
   Widget build(BuildContext context) {
@@ -40,14 +37,16 @@ class CallRecordTile extends StatelessWidget {
           const SizedBox(width: 6.0),
           Text(
             timeStamp,
-            style: const TextStyle(color: kTextDarkColor,),
+            style: const TextStyle(
+              color: kTextDarkColor,
+            ),
           ),
         ],
       ),
       trailing: IconButton(
         onPressed: () {},
         icon: const Icon(Icons.phone_outlined, color: kIconColor),
-        ),
+      ),
     );
   }
 }

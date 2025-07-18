@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-import 'package:whatsapp_clone/screens/communities/components/widgets/community_announcements.dart';
-import 'package:whatsapp_clone/screens/communities/components/widgets/community_messages.dart';
-import 'package:whatsapp_clone/screens/communities/components/widgets/community_name.dart';
-
+import 'package:whoishe/constants/colors.dart';
+import 'package:whoishe/screens/communities/components/widgets/community_announcements.dart';
+import 'package:whoishe/screens/communities/components/widgets/community_messages.dart';
+import 'package:whoishe/screens/communities/components/widgets/community_name.dart';
 
 class CommunityCard extends StatelessWidget {
   final String profilePic;
@@ -27,16 +26,24 @@ class CommunityCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        color: kbackgroundColor,
-        shape: BoxShape.rectangle
-      ),
+          color: kbackgroundColor, shape: BoxShape.rectangle),
       child: Column(
         children: [
-          CommunityName(communityName: communityName, profilePicture: profilePic,),
+          CommunityName(
+            communityName: communityName,
+            profilePicture: profilePic,
+          ),
           const Divider(color: kDividerColor),
           const SizedBox(height: 5.0),
-          CommunityAnnouncements(announcement: announcement, announcementTimeStamp: announcementTimeStamp,),
-          CommunityMessage(profilePicture: profilePic, communityName: communityName, message: message, timeStamp: messageTimeStamp),
+          CommunityAnnouncements(
+            announcement: announcement,
+            announcementTimeStamp: announcementTimeStamp,
+          ),
+          CommunityMessage(
+              profilePicture: profilePic,
+              communityName: communityName,
+              message: message,
+              timeStamp: messageTimeStamp),
         ],
       ),
     );

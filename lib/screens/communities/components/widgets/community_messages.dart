@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
-
+import 'package:whoishe/constants/colors.dart';
 
 class CommunityMessage extends StatelessWidget {
   final String profilePicture;
@@ -8,13 +7,12 @@ class CommunityMessage extends StatelessWidget {
   final String timeStamp;
   final String message;
 
-  const CommunityMessage({
-    super.key,
-    required this.profilePicture,
-    required this.communityName,
-    required this.message,
-    required this.timeStamp
-  });
+  const CommunityMessage(
+      {super.key,
+      required this.profilePicture,
+      required this.communityName,
+      required this.message,
+      required this.timeStamp});
 
   @override
   Widget build(BuildContext context) {
@@ -51,12 +49,9 @@ class CommunityMessage extends StatelessWidget {
         subtitle: Text(
           message,
           style: const TextStyle(
-            color: kTextDarkColor,
-            overflow: TextOverflow.ellipsis
-          ),
+              color: kTextDarkColor, overflow: TextOverflow.ellipsis),
         ),
-      ), 
-      
+      ),
     );
   }
 }

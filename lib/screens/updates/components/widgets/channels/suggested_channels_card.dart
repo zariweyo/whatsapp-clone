@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants/colors.dart';
+import 'package:whoishe/constants/colors.dart';
 
 class SuggestedChannelsCard extends StatelessWidget {
   final String name, channelProfilePicture;
