@@ -2,11 +2,15 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:whoishe/models/message.dart';
+import 'package:whoishe/screens/chats/bloc/bob_chat_repository.dart';
 import 'package:whoishe/screens/chats/bloc/chat_event.dart';
 import 'package:whoishe/screens/chats/bloc/chat_state.dart';
 
 class ChatBloc extends Bloc<ChatEvent, ChatState> {
+  late BobChatRepository bobChatRepository;
   ChatBloc(super.initialState) {
+    bobChatRepository = BobChatRepository();
+
     on<SendMessageEvent>(_mapSendMessageEvent);
     on<AskBobEvent>(_mapAskBobEvent);
   }
@@ -21,9 +25,11 @@ class ChatBloc extends Bloc<ChatEvent, ChatState> {
     add(AskBobEvent(text: event.text));
   }
 
-  FutureOr<void> _mapAskBobEvent(AskBobEvent event, Emitter<ChatState> emit) {
+  FutureOr<void> _mapAskBobEvent(
+      AskBobEvent event, Emitter<ChatState> emit) async {
+    String response = await bobChatRepository.askBob(event.text);
     Message message =
-        Message(timeZ: DateTime.now().toUtc(), uuid: 'bob', text: "Soy Bob");
+        Message(timeZ: DateTime.now().toUtc(), uuid: 'bob', text: response);
 
     emit(ChatState(messages: [...state.messages, message]));
   }

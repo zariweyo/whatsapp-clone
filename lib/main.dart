@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:whoishe/common/screens/homescreen.dart';
 import 'package:whoishe/constants/colors.dart';
+import 'package:whoishe/firebase_options.dart';
 import 'package:whoishe/routes.dart';
-import 'package:whoishe/screens/onboarding_screen/onboarding_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const WhatsAppClone());
 }
 
@@ -41,9 +45,9 @@ class WhatsAppClone extends StatelessWidget {
         scaffoldBackgroundColor: kbackgroundColor,
         useMaterial3: true,
       ),
-      initialRoute: OnboardingScreen.routeName,
+      initialRoute: HomeScreen.routeName,
       routes: routes,
-      home: const OnboardingScreen(),
+      home: const HomeScreen(),
     );
   }
 }

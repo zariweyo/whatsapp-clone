@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:whoishe/models/messages.dart';
 import 'package:whoishe/screens/chats/bloc/chat_bloc.dart';
 import 'package:whoishe/screens/chats/bloc/chat_state.dart';
 import 'package:whoishe/screens/chats/components/widgets/messages/receiver_message_bubble.dart';
@@ -13,9 +12,18 @@ class ChatScreenMessagesWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<ChatBloc, ChatState>(
+    ScrollController controller = ScrollController();
+    return BlocConsumer<ChatBloc, ChatState>(
+        listener: (context, state) {
+          if (state.messages.isNotEmpty) {
+            WidgetsBinding.instance.addPostFrameCallback((_) {
+              controller.jumpTo(controller.position.maxScrollExtent);
+            });
+          }
+        },
         builder: (context, state) => Expanded(
               child: ListView.builder(
+                controller: controller,
                 itemCount: state.messages.length,
                 itemBuilder: (context, index) {
                   if (state.messages[index].isSender == false) {
